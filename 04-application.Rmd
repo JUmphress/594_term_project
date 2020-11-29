@@ -2,6 +2,13 @@
 
 Some _significant_ applications are demonstrated in this chapter.
 
+```{r}
+library(ggplot2)
+layton_readings <- read.csv("C:/layton_readings.csv")
+eq1 <- ggplot(layton_readings,aes(Manual_EQ_1.2,Auto_EQ_1)) + geom_jitter()
+eq1
+```
+
 ## Example one
 
 ## Example two
