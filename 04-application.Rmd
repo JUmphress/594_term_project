@@ -1,14 +1,60 @@
-# Applications
+# Data Analysis
 
-Some _significant_ applications are demonstrated in this chapter.
+The data for trips taken in the 2009 NHTS show that relatively low amounts of trips were taken using public transit modes. Those modes include local public bus (9), commuter bus (10), commuter train (16), and subway (17).
 
 ```{r}
-library(ggplot2)
-layton_readings <- read.csv("C:/layton_readings.csv")
-eq1 <- ggplot(layton_readings,aes(Manual_EQ_1.2,Auto_EQ_1)) + geom_jitter()
-eq1
+library(tidyverse)
+trips_2009 <- read.csv("C:/DAYV2PUB.csv")
+trips_2009 %>%
+  group_by(TRPTRANS) %>%
+  summarise(count=n()) %>%
+  filter(TRPTRANS>0, TRPTRANS<30) %>%
+  ggplot(aes(x=TRPTRANS,y=count)) +
+  geom_bar(stat="identity")
 ```
 
-## Example one
+The total distance traveled using transit modes were analyzed by different trip purposes.
 
-## Example two
+```{r}
+trips_2009 %>%
+  filter(TRPTRANS==c(9,10,16,17)) %>% #filter for transit modes
+  filter(TRIPPURP==c("HBO","HBSHOP","HBSOCREC","HBW","NHB")) %>%
+  filter(TRPMILES>=0) %>% #filter undetermined results
+  ggplot(aes(x=TRIPPURP,y=TRPMILES)) +
+  geom_bar(stat="identity")
+```
+
+Like the 2009 NHTS, the 2017 NHTS showed that transit use constituted a low percent of trips taken. Public and commuter buses (11), commuter rail (15), and subway (16) are the available transit modes. Ridesourced trips are coded as 17.
+
+```{r}
+library(tidyverse)
+trips_2017 <- read.csv("C:/DAYV2PUB.csv")
+trips_2017 %>%
+  group_by(TRPTRANS) %>%
+  summarise(count=n()) %>%
+  filter(TRPTRANS>0,TRPTRANS<21) %>%
+  ggplot(aes(x=TRPTRANS,y=count)) +
+  geom_bar(stat="identity")
+```
+
+The 2017 NHTS showed changes in the distance traveled using transit modes. Home-based other and non-home-based trips showed high increases in mileage traveled. The distance for home-based work trips stayed constant, while home-based shopping and home-based social and recreational trip distance decreased.
+
+```{r}
+trips_2017 %>%
+  filter(TRPTRANS==c(11,15,16)) %>% #filter for transit modes
+  filter(TRIPPURP==c("HBO","HBSHOP","HBSOCREC","HBW","NHB")) %>% #select trip purposes
+  filter(TRPMILES>=0) %>% #filter undetermined results
+  ggplot(aes(x=TRIPPURP,y=TRPMILES)) +
+  geom_bar(stat="identity")
+```
+
+Trip distance traveled by ridesourcing was listed in comparison with distance traveled by transit. Ridesourcing provided significantly less mileage for home-based other and non-home-based trips, but it was comparable for home-based work trips and provided greater distance for home-based shopping and home-based social and recreational trips.
+
+```{r}
+trips_2017 %>%
+  filter(TRPTRANS==17) %>% #filter for transit modes
+  filter(TRIPPURP==c("HBO","HBSHOP","HBSOCREC","HBW","NHB")) %>%
+  filter(TRPMILES>=0) %>% #filter undetermined results
+  ggplot(aes(x=TRIPPURP,y=TRPMILES)) +
+  geom_bar(stat="identity")
+```

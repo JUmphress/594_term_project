@@ -1,21 +1,4 @@
-# Introduction {#intro}
+# Abstract
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+In my term project, I plan to analyze the effects of ridesharing services on public transit system use within the United States. Specifically, I will analyze whether increased ridesharing is related to increases, decreases, or no changes in public transit ridership. While people commonly hypothesize that ridesharing reduces public transit use, very few studies have been conducted on that specific topic. Past studies suggest that few people frequently use ridesharing services, though there are many other users who rideshare infrequently. Ridesharing tends to favor those in younger and wealthier demographics compared to most other modes such as public transit, biking, and taxis. Studies are available that compare transit or ridesharing use to specific demographic variables such as race or age, but they do not compare them together. Data from the 2009 and 2017 National Household Travel Surveys will be used for my analysis. Since ridesharing was not a sufficiently common mode of transportation in 2009, ridesharing data was not collected and the data may need to be treated as though there was no ridesharing in 2009. Other information analyzed to compare to transit and rideshare use will likely include rider demographics such as age or family income. 
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
-
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
-
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
-
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
-
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].

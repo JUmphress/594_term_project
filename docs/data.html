@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Data</title>
+  <title>Chapter 4 Data | A Minimal Book Example</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Data" />
+  <meta property="og:title" content="Chapter 4 Data | A Minimal Book Example" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Data" />
+  <meta name="twitter:title" content="Chapter 4 Data | A Minimal Book Example" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Yihui Xie" />
 
 
-<meta name="date" content="2020-09-26" />
+<meta name="date" content="2020-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="litreview.html"/>
-<link rel="next" href="methods.html"/>
+<link rel="prev" href="literature-review.html"/>
+<link rel="next" href="data-analysis.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -135,13 +135,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="litreview.html"><a href="litreview.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Data</a></li>
-<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
-<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
-<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
-<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="literature-review.html"><a href="literature-review.html"><i class="fa fa-check"></i><b>3</b> Literature Review</a><ul>
+<li class="chapter" data-level="3.1" data-path="literature-review.html"><a href="literature-review.html#large-scale-ridesourcing-trends"><i class="fa fa-check"></i><b>3.1</b> Large-Scale Ridesourcing Trends</a></li>
+<li class="chapter" data-level="3.2" data-path="literature-review.html"><a href="literature-review.html#ridesourcing-trends-in-cities"><i class="fa fa-check"></i><b>3.2</b> Ridesourcing Trends in Cities</a></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>4</b> Data</a></li>
+<li class="chapter" data-level="5" data-path="data-analysis.html"><a href="data-analysis.html"><i class="fa fa-check"></i><b>5</b> Data Analysis</a></li>
 <li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -164,8 +164,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="literature" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Data</h1>
+<div id="data" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Data</h1>
 <p>The data for this study comes from the 2009 and 2017 National Household Travel Surveys (NHTS). The NHTS collects detailed data on travel behavior within the United States by surveying selected regions and adjusting the data to represent trends in the country as a whole. The data can be classified as being collected to describe households, persons, workers, vehicles, and trips. Some data categories are added and removed from between different iterations of the NHTS, but most categories remain consistent.</p>
 <p>The data collected for households includes the number of people, drivers, workers, and vehicles, the income, the housing type, whether the residence is owned or rented, the race and hispanic status of the household reference person, the tract and block group characteristics, and internet use and delivery. The 2009 NHTS also includes information about the number of cell phones and other phones in the household, but the 2017 NHTS does not.</p>
 <p>The data collected on persons includes the age, sex, relationship to the reference person, driver status, worker status or primary occupation, internet use, home deliveries from internet shopping, travel disability, effects of disability on mobility, education level, immigrant status, views on transportation, annual number of miles driven, public transit and motorcycle in the last month, and biking and walking trips in the last week. The 2009 NHTS includes school trips for children and individual internet use, while the 2017 NHTS adds the number of biking and walking trips for exercise, rideshare app use and rideshare service from the last month, usual mode of travel for getting to school, and the use of the travel log on the days trips were taken.</p>
@@ -173,14 +173,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The vehicle data includes car make, model, and age, the amount of miles driven annually, how long the vehicle has been owned, the vehicle odometer reading, whether the vehicle uses alternative fuel, and who the primary driver is. The 2009 NHTS states whether the vehicle is commercially owned, and the 2017 NHTS lists vehicle body type, fuel type, and hybrid type for hybrid vehicles.</p>
 <p>Trip data includes origin and destination addresses, tip start and end times,trip distance, trip purpose, travel party size, the last time of travel, and the means of transportation including vehicle type, which household vehicle is used, wait time for transit, and access and egress mode for transit. The 2009 NHTS includes additional data for interstate use and toll payment.</p>
 <p>Important categories within the given data include rideshare app use, actual rideshare service use, transit use, and means of travel. Other data may be used to provide clarity to trends shown within the data.</p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="litreview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="literature-review.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
