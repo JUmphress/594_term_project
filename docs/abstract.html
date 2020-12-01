@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Applications | A Minimal Book Example</title>
+  <title>Chapter 2 Abstract | A Minimal Book Example</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Applications | A Minimal Book Example" />
+  <meta property="og:title" content="Chapter 2 Abstract | A Minimal Book Example" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Applications | A Minimal Book Example" />
+  <meta name="twitter:title" content="Chapter 2 Abstract | A Minimal Book Example" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data.html"/>
-<link rel="next" href="final-words.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="literature-review.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -135,16 +135,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="abstract.html"><a href="abstract.html"><i class="fa fa-check"></i><b>2</b> Abstract</a></li>
 <li class="chapter" data-level="3" data-path="literature-review.html"><a href="literature-review.html"><i class="fa fa-check"></i><b>3</b> Literature Review</a><ul>
 <li class="chapter" data-level="3.1" data-path="literature-review.html"><a href="literature-review.html#large-scale-ridesourcing-trends"><i class="fa fa-check"></i><b>3.1</b> Large-Scale Ridesourcing Trends</a></li>
 <li class="chapter" data-level="3.2" data-path="literature-review.html"><a href="literature-review.html#ridesourcing-trends-in-cities"><i class="fa fa-check"></i><b>3.2</b> Ridesourcing Trends in Cities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>4</b> Data</a></li>
-<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
-<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
-<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
-</ul></li>
+<li class="chapter" data-level="5" data-path="data-analysis.html"><a href="data-analysis.html"><i class="fa fa-check"></i><b>5</b> Data Analysis</a></li>
 <li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -167,30 +164,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="applications" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> Applications</h1>
-<p>Some <em>significant</em> applications are demonstrated in this chapter.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="applications.html#cb4-1"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb4-2"><a href="applications.html#cb4-2"></a>layton_readings &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;C:/layton_readings.csv&quot;</span>)</span>
-<span id="cb4-3"><a href="applications.html#cb4-3"></a>eq1 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(layton_readings,<span class="kw">aes</span>(Manual_EQ_<span class="fl">1.2</span>,Auto_EQ_<span class="dv">1</span>)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_jitter</span>()</span>
-<span id="cb4-4"><a href="applications.html#cb4-4"></a>eq1</span></code></pre></div>
-<pre><code>## Warning: Removed 52 rows containing missing values (geom_point).</code></pre>
-<p><img src="594_term_project_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<div id="example-one" class="section level2">
-<h2><span class="header-section-number">5.1</span> Example one</h2>
-</div>
-<div id="example-two" class="section level2">
-<h2><span class="header-section-number">5.2</span> Example two</h2>
+<div id="abstract" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Abstract</h1>
+<p>In my term project, I plan to analyze the effects of ridesharing services on public transit system use within the United States. Specifically, I will analyze whether increased ridesharing is related to increases, decreases, or no changes in public transit ridership. While people commonly hypothesize that ridesharing reduces public transit use, very few studies have been conducted on that specific topic. Past studies suggest that few people frequently use ridesharing services, though there are many other users who rideshare infrequently. Ridesharing tends to favor those in younger and wealthier demographics compared to most other modes such as public transit, biking, and taxis. Studies are available that compare transit or ridesharing use to specific demographic variables such as race or age, but they do not compare them together. Data from the 2009 and 2017 National Household Travel Surveys will be used for my analysis. Since ridesharing was not a sufficiently common mode of transportation in 2009, ridesharing data was not collected and the data may need to be treated as though there was no ridesharing in 2009. Other information analyzed to compare to transit and rideshare use will likely include rider demographics such as age or family income.</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="final-words.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="literature-review.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
