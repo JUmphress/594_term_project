@@ -4,7 +4,7 @@ The data for trips taken in the 2009 NHTS show that relatively low amounts of tr
 
 ```{r}
 library(tidyverse)
-trips_2009 <- read.csv("C:/DAYV2PUB.csv")
+trips_2009 <- read.csv("C:/594_term_project/data/DAYV2PUB.csv")
 trips_2009 %>%
   group_by(TRPTRANS) %>%
   summarise(count=n()) %>%
@@ -28,7 +28,7 @@ Like the 2009 NHTS, the 2017 NHTS showed that transit use constituted a low perc
 
 ```{r}
 library(tidyverse)
-trips_2017 <- read.csv("C:/DAYV2PUB.csv")
+trips_2017 <- read.csv("C:/594_term_project/data/DAYV2PUB.csv")
 trips_2017 %>%
   group_by(TRPTRANS) %>%
   summarise(count=n()) %>%
