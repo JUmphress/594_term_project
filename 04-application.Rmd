@@ -3,8 +3,11 @@
 The data for trips taken in the 2009 NHTS show that relatively low amounts of trips were taken using public transit modes. Those modes include local public bus (9), commuter bus (10), commuter train (16), and subway (17).
 
 ```{r}
+# Load necessary R libraries
 library(tidyverse)
-trips_2009 <- read.csv("C:/594_term_project/data/DAYV2PUB.csv")
+# Load 2009 trip data files
+trips_2009 <- read_csv("C:/594_term_project/data/2009_nhts/DAYV2PUB.csv")
+# Separate trips by mode
 trips_2009 %>%
   group_by(TRPTRANS) %>%
   summarise(count=n()) %>%
@@ -16,7 +19,10 @@ trips_2009 %>%
 The total distance traveled using transit modes were analyzed by different trip purposes.
 
 ```{r}
+# Separate transit trips by purpose
 trips_2009 %>%
+  group_by(TRPTRANS) %>%
+  summarise(TRPMILES=sum(TRPMILES)) %>%
   filter(TRPTRANS==c(9,10,16,17)) %>% #filter for transit modes
   filter(TRIPPURP==c("HBO","HBSHOP","HBSOCREC","HBW","NHB")) %>%
   filter(TRPMILES>=0) %>% #filter undetermined results
@@ -27,7 +33,7 @@ trips_2009 %>%
 Like the 2009 NHTS, the 2017 NHTS showed that transit use constituted a low percent of trips taken. Public and commuter buses (11), commuter rail (15), and subway (16) are the available transit modes. Ridesourced trips are coded as 17.
 
 ```{r}
-library(tidyverse)
+# Load 2017 trip data
 trips_2017 <- read.csv("C:/594_term_project/data/DAYV2PUB.csv")
 trips_2017 %>%
   group_by(TRPTRANS) %>%
